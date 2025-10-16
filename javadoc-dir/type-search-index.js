@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.example.listycity","l":"CityListTest"},{"p":"com.example.listycity","l":"ExampleUnitTest"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.example.listycity","l":"City"},{"p":"com.example.listycity","l":"CityList"}];updateSearchResults();
