@@ -36,13 +36,9 @@ public class CityListTest {
     @Test
     public void testGetCities() {
         CityList cityList = mockCityList();
-        // This line checks if the first city in the cityList (retrieved by cityList.getCities().get(0))
-        // is the same as the city returned by mockCity()
         assertEquals(0, mockCity().compareTo(cityList.getCities().get(0)));
-        // This pushes down the original city
         City city = new City("Charlottetown", "Prince Edward Island");
         cityList.add(city);
-        // Now the original city should be at position 1
         assertEquals(0, city.compareTo(cityList.getCities().get(0)));
         assertEquals(0, mockCity().compareTo(cityList.getCities().get(1)));
     }
@@ -53,7 +49,6 @@ public class CityListTest {
         City city = new City("Calgary", "Alberta");
         cityList.add(city);
         assertTrue(cityList.hasCity(city));
-
         City otherCity = new City("Vancouver", "British Columbia");
         assertFalse(cityList.hasCity(otherCity));
     }
@@ -64,7 +59,6 @@ public class CityListTest {
         City city = new City("Edmonton", "Alberta");
         cityList.add(city);
         assertTrue(cityList.hasCity(city));
-
         cityList.delete(city);
         assertFalse(cityList.hasCity(city));
     }
@@ -82,7 +76,6 @@ public class CityListTest {
     public void testCountCities() {
         CityList cityList = new CityList();
         assertEquals(0, cityList.numberOfCities());
-
         cityList.add(new City("Edmonton", "Alberta"));
         cityList.add(new City("Calgary", "Alberta"));
         assertEquals(2, cityList.numberOfCities());
